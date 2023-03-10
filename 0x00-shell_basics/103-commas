@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | sort -d --ignore='.*' | sed -e 's/$/,/' -e 's/([^0-9a-zA-Z])//' -e 's/^\.\.\//&~/' -e 's/^\.\//&~/' | tr -d '\n' echo
+ls -am
