@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g' -e 's/\([^\/]\)$/\1\//g'
+ls -1a | awk '{printf "%s%s", $0, (NR%2==0 ? "\n" : ", ")}'
