@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -m -p | sed -e 's/, /,/g' -e 's/\([^\/]\)$/\1\//' | tr -d '\n'
+ls -Ap | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g' -e 's/\([^\/]\)$/\1\//g'
